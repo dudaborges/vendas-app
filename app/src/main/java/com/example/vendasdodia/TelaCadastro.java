@@ -33,7 +33,7 @@ public class TelaCadastro extends AppCompatActivity {
     }
 
     private void recuperarDados() {
-        
+
     }
 
     public void abrir_tela_login(View v){

@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.security.Principal;
 
@@ -51,6 +52,10 @@ public class TelaCadastro extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    u.setId(user.getUid());
+                    u.salvarDados();
+
                     startActivity(new Intent(TelaCadastro.this, TelaInicio.class));
                 }else{
                     Toast.makeText(TelaCadastro.this, "Erro ao criar o login", Toast.LENGTH_LONG).show();

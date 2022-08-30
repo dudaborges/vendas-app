@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.vendasdodia.modelo.Usuario;
 
 public class TelaCadastro extends AppCompatActivity {
 
@@ -33,7 +36,15 @@ public class TelaCadastro extends AppCompatActivity {
     }
 
     private void recuperarDados() {
-
+    if(etNome.getText().toString()==""||etEmail.getText().toString()==""||etSenha.getText().toString()==""){
+        Toast.makeText(this, "Você deve preencher todos os dados", Toast.LENGTH_LONG);
+    }else{
+        Usuario u = new Usuario();
+        u.setNome(etNome.getText().toString());
+        u.setEmail(etEmail.getText().toString());
+        u.setSenha(etSenha.getText().toString());
+        
+    }
     }
 
     public void abrir_tela_login(View v){

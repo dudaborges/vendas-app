@@ -176,8 +176,9 @@
         android:background="@drawable/botaoverde"
         android:text="Ver"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate2"
-        tools:layout_editor_absoluteX="105dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate2" />
 
     <ImageView
         android:id="@+id/imageView56"

@@ -61,6 +61,7 @@ public class TelaLogin extends AppCompatActivity {
     }
 
     private void receberDados() {
+    u = new Usuario();
     u.setEmail(etEmail.getText().toString());
     u.setSenha(etSenha.getText().toString());
     }
